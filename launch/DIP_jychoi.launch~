@@ -1,9 +1,0 @@
-<launch>
-
-  <!-- See src/DIP_config.txt for parameter settings -->
-  <node name="obj_detector" pkg="dip_jychoi" type="run_module.py" output="screen" args="$(find dip_jychoi)/src/" "obj_detector.py" />
-  <node name="pose_estimator" pkg="dip_jychoi" type="run_module.py" output="screen" args="$(find dip_jychoi)/src/" "pose_estimator.py" />
-  <node name="reid" pkg="dip_jychoi" type="run_module.py" output="screen" args="$(find dip_jychoi)/src/" "person_reid.py" />
-  <node name="captioner" pkg="dip_jychoi" type="run_module.py" output="screen" args="$(find dip_jychoi)/src/" "image_captioner.py" />
-  <node name="DIP" pkg="dip_jychoi" type="run_module.py" output="screen" args="$(find dip_jychoi)/src/" "DIP.py" />	
-</launch>
