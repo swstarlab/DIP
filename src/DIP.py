@@ -128,8 +128,6 @@ class DIP():
 			cloud *= 255
 			cloud = cloud[:,:,0].reshape((240,320,1)).astype('uint8')
 			rgbd = (0.7*rgb + 0.3*cloud).astype('uint8')
-			cv2.rectangle(rgbd, (0,0) , (300,15) , (0,0,0) , -1 )
-			cv2.putText(rgbd,'DIP1.0 by Jinyoung Choi (gliese581gg@naver.com)',(10,12),cv2.FONT_HERSHEY_SIMPLEX,0.35,color=(255,255,255),thickness=1)
 
 			for o in per.objects :
 				x = o.x - o.h
